@@ -25,91 +25,91 @@ function ProductMenu() {
         <p>
           <b>Multi Range</b>
         </p>
-        <div class="form-check">
+        <div className="form-check">
           <input
-            class="form-check-input"
+            className="form-check-input"
             type="radio"
             name="exampleRadios"
             id="multirange"
             value="option1"
             checked
           />
-          <label class="form-check-label" for="exampleRadios1">
+          <label className="form-check-label" htmlFor="exampleRadios1">
             $10
           </label>
         </div>
-        <div class="form-check">
+        <div className="form-check">
           <input
-            class="form-check-input"
+            className="form-check-input"
             type="radio"
             name="exampleRadios"
             id="multirange"
             value="option2"
           />
-          <label class="form-check-label" for="exampleRadios2">
+          <label className="form-check-label" htmlFor="exampleRadios2">
             $10-$100
           </label>
         </div>
-        <div class="form-check disabled">
+        <div className="form-check disabled">
           <input
-            class="form-check-input"
+            className="form-check-input"
             type="radio"
             name="exampleRadios"
             id="multirange"
             value="option3"
           />
-          <label class="form-check-label" for="exampleRadios3">
+          <label className="form-check-label" htmlFor="exampleRadios3">
             $100-$500
           </label>
         </div>
-        <div class="form-check disabled">
+        <div className="form-check disabled">
           <input
-            class="form-check-input"
+            className="form-check-input"
             type="radio"
             name="exampleRadios"
             id="multirange"
             value="option3"
           />
-          <label class="form-check-label" for="exampleRadios3">
+          <label className="form-check-label" htmlFor="exampleRadios3">
             $500
           </label>
         </div>
-        <div class="form-check disabled">
+        <div className="form-check disabled">
           <input
-            class="form-check-input"
+            className="form-check-input"
             type="radio"
             name="exampleRadios"
             id="multirange"
             value="option3"
           />
-          <label class="form-check-label" for="exampleRadios3">
+          <label className="form-check-label" htmlFor="exampleRadios3">
             All
           </label>
         </div>
       </div>
       <hr />
       <div className="d-flex justify-content-between">
-        <p for="customRange1" class="form-label">
+        <p htmlFor="customRange1" className="form-label">
           <b>Slider</b>
         </p>
-        <p for="customRange1" class="form-label">
+        <p htmlFor="customRange1" className="form-label">
           <b>1.99 - 4098</b>
         </p>
       </div>
-      <input type="range" class="form-range" id="customRange1" />
+      <input type="range" className="form-range" id="customRange1" />
       <hr />
       <p>
         <b>Category</b>
       </p>
       {categories.map((category) => (
-        <div class="form-check">
+        <div className="form-check" key={category}>
           <input
-            class="form-check-input"
+            className="form-check-input"
             type="checkbox"
             value=""
             id="defaultCheck1"
           />
-          <label class="form-check-label" for="defaultCheck1">
+          <label className="form-check-label" htmlFor="defaultCheck1">
             {category.name}
           </label>
         </div>
@@ -119,14 +119,14 @@ function ProductMenu() {
         <b>Brands</b>
       </p>
       {brands.map((brand) => (
-        <div class="form-check">
+        <div className="form-check" key={brand.name}>
           <input
-            class="form-check-input"
+            className="form-check-input"
             type="checkbox"
             value=""
             id="defaultCheck1"
           />
-          <label class="form-check-label" for="defaultCheck1">
+          <label className="form-check-label" htmlFor="defaultCheck1">
             {brand.name}
           </label>
         </div>

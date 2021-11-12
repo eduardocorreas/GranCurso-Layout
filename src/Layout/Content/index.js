@@ -7,6 +7,7 @@ import ProductMenu from "../../components/ProductMenu";
 function Content() {
   const [products] = useState([
     {
+      id: 1,
       name: "Apple Watch Series",
       company: "Apple",
       description:
@@ -15,6 +16,7 @@ function Content() {
       rating: 3.4,
     },
     {
+      id: 2,
       name: "Apple Watch Series",
       company: "Apple",
       description:
@@ -23,6 +25,7 @@ function Content() {
       rating: 3.4,
     },
     {
+      id: 3,
       name: "Apple Watch Series",
       company: "Apple",
       description:
@@ -31,6 +34,7 @@ function Content() {
       rating: 3.4,
     },
     {
+      id: 4,
       name: "Apple Watch Series",
       company: "Apple",
       description:
@@ -68,14 +72,14 @@ function Content() {
             <h5 className="mr-2">Card Actions</h5>
           </div>
           <nav aria-label="breadcrumb ml-2">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item">
+            <ol className="breadcrumb">
+              <li className="breadcrumb-item">
                 <a href="/">
                   <i className="far fa-home  mr-2"></i>
                 </a>
               </li>
-              <li class="breadcrumb-item">eCommerce</li>
-              <li class="breadcrumb-item active" aria-current="page">
+              <li className="breadcrumb-item">eCommerce</li>
+              <li className="breadcrumb-item active" aria-current="page">
                 Eletronics
               </li>
             </ol>
@@ -99,17 +103,17 @@ function Content() {
               <div className="col-md-4">
                 <div className="d-flex">
                   <select
-                    class="form-select form-select-sm mr-2"
+                    className="form-select form-select-sm mr-2"
                     name="category"
                     id=""
                   >
                     <option value="default">Default</option>
                   </select>
                   <button className="btn btn-light shadow-sm mr-2">
-                    <i class="fal fa-grip-horizontal"></i>
+                    <i className="fal fa-grip-horizontal"></i>
                   </button>
                   <button className="btn btn-light shadow-sm">
-                    <i class="fal fa-bars"></i>
+                    <i className="fal fa-bars"></i>
                   </button>
                 </div>
               </div>
@@ -119,19 +123,19 @@ function Content() {
         <div className="row col-md-12">
           <ProductMenu />
           <div className="col-md-9">
-            <div class="input-group mb-3 shadow-sm">
+            <div className="input-group mb-3 shadow-sm">
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 style={{ borderColor: "#fff" }}
                 placeholder="Search hear"
               />
-              <button class="btn bg-white" type="button" id="button-addon2">
+              <button className="btn bg-white" type="button" id="button-addon2">
                 <i className="far fa-search "></i>
               </button>
             </div>
             {products.map((product) => (
-              <ProductCard product={product} />
+              <ProductCard product={product} key={product.id} />
             ))}
           </div>
         </div>

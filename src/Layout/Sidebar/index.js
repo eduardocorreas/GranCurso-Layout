@@ -86,19 +86,19 @@ function Sidebar() {
     },
   ]);
   return (
-    <div class="border-end bg-white" id="sidebar-wrapper">
-      <div class="sidebar-heading border-bottom bg-light">
+    <div className="border-end bg-white" id="sidebar-wrapper">
+      <div className="sidebar-heading border-bottom bg-light">
         <img src={Logo} alt="Logo" style={{ width: "200px" }} />
       </div>
       {menus.map((menu) => (
-        <>
+        <div key={menu.category}>
           <p className="ml-3 mb-0 mt-3">
             <b>{menu.category}</b>
           </p>
           {menu.items.map((item) => (
-            <div class="list-group list-group-flush">
+            <div className="list-group list-group-flush" key={item.label}>
               <a
-                class="list-group-item list-group-item-action list-group-item-light p-3"
+                className="list-group-item list-group-item-action list-group-item-light p-3"
                 href="#!"
               >
                 <i className={`${item.icon} mr-2`}></i>
@@ -106,7 +106,7 @@ function Sidebar() {
               </a>
             </div>
           ))}
-        </>
+        </div>
       ))}
     </div>
   );

@@ -86,14 +86,14 @@ function MobileMenu() {
     },
   ]);
   return (
-    <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+    <ul className="navbar-nav ms-auto mt-2 mt-lg-0">
       {menus.map((menu) => (
-        <>
+        <div key={menu.category}>
           {menu.category == "" ? (
             <>
               {menu.items.map((item) => (
-                <li class="nav-item active">
-                  <a class="nav-link" href="#!">
+                <li className="nav-item active" key={item.label}>
+                  <a className="nav-link" href="#!">
                     <i className={`${item.icon} mr-2`}></i>
                     {item.label}
                   </a>
@@ -101,10 +101,10 @@ function MobileMenu() {
               ))}
             </>
           ) : (
-            <>
-              <li class="nav-item dropdown">
+            <div>
+              <li className="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle"
+                  className="nav-link dropdown-toggle"
                   id="navbarDropdown"
                   href="/"
                   role="button"
@@ -115,55 +115,21 @@ function MobileMenu() {
                   {menu.category}
                 </a>
                 <div
-                  class="dropdown-menu dropdown-menu-end"
+                  className="dropdown-menu dropdown-menu-end"
                   aria-labelledby="navbarDropdown"
                 >
                   {menu.items.map((item) => (
-                    <a class="dropdown-item" href="#!">
+                    <a className="dropdown-item" key={item.label} href="#!">
                       <i className={`${item.icon} mr-2`}></i>
                       {item.label}
                     </a>
                   ))}
                 </div>
               </li>
-            </>
+            </div>
           )}
-        </>
-      ))}
-
-      <li class="nav-item">
-        <a class="nav-link" href="#!">
-          Link
-        </a>
-      </li>
-      <li class="nav-item dropdown">
-        <a
-          class="nav-link dropdown-toggle"
-          id="navbarDropdown"
-          href="#"
-          role="button"
-          data-bs-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
-          Dropdown
-        </a>
-        <div
-          class="dropdown-menu dropdown-menu-end"
-          aria-labelledby="navbarDropdown"
-        >
-          <a class="dropdown-item" href="#!">
-            Action
-          </a>
-          <a class="dropdown-item" href="#!">
-            Another action
-          </a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#!">
-            Something else here
-          </a>
         </div>
-      </li>
+      ))}
     </ul>
   );
 }
