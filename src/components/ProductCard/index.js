@@ -17,7 +17,7 @@ function ProductCard({ product }) {
             </div>
             <div className="col-md-3">
               <div className="text-right">
-                <span className="badge bg-warning">
+                <span className="badge bg-secondary">
                   {product.rating} <i className="far fa-star"></i>
                 </span>
               </div>
