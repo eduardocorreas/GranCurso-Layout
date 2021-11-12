@@ -89,7 +89,7 @@ function MobileMenu() {
     <ul className="navbar-nav ms-auto mt-2 mt-lg-0">
       {menus.map((menu) => (
         <div key={menu.category}>
-          {menu.category == "" ? (
+          {menu.category === "" ? (
             <>
               {menu.items.map((item) => (
                 <li className="nav-item active" key={item.label}>
